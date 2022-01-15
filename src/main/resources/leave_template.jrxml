@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="leave_template" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3a5e5269-e976-4002-9263-8bf20d625a2d">
+    <parameter name="v_company_name" class="java.lang.String"/>
+    <parameter name="v_name" class="java.lang.String"/>
+    <parameter name="v_department" class="java.lang.String"/>
+    <parameter name="v_last_leave" class="java.lang.String"/>
+    <parameter name="v_today" class="java.lang.String"/>
+    <parameter name="v_remain_leave" class="java.lang.String"/>
+    <parameter name="v_leave_days_requested" class="java.lang.String"/>
+    <parameter name="v_leave_day_balance" class="java.lang.String"/>
+    <parameter name="v_start_date" class="java.lang.String"/>
+    <parameter name="v_resumption_date" class="java.lang.String"/>
+    <parameter name="v_contact_no" class="java.lang.String"/>
+    <parameter name="v_image" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <textField>
+                <reportElement key="company_name" isPrintRepeatedValues="false" x="180" y="10" width="200" height="20" uuid="665dc953-cd8d-4006-8210-9741b8f92e91">
+                    <property name="com.jaspersoft.studio.element.name" value="company_name"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$P{v_company_name}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" x="181" y="43" width="199" height="17" uuid="cf861dad-d651-4350-bc02-5091bd0a4104"/>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center"/>
+                <text><![CDATA[ LEAVE APPLICATION FORM]]></text>
+            </staticText>
+            <image>
+                <reportElement key="image" x="10" y="10" width="50" height="50" uuid="eeb3a3b8-5350-44ad-8892-00ffa305f7d8">
+                    <property name="com.jaspersoft.studio.element.name" value="image"/>
+                </reportElement>
+                <imageExpression><![CDATA[$P{v_image}]]></imageExpression>
+            </image>
+            <textField>
+                <reportElement key="current_date" x="470" y="50" width="90" height="20" uuid="8d1026b7-4603-460b-a65c-be839260dc3f">
+                    <property name="com.jaspersoft.studio.element.name" value="current_date"/>
+                </reportElement>
+                <textFieldExpression><![CDATA[$P{v_today}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="101" splitType="Stretch">
+            <staticText>
+                <reportElement x="2" y="19" width="68" height="21" uuid="d213a5a7-8a72-48e7-a39a-7524035deebb"/>
+                <box>
+                    <pen lineWidth="1.0" lineColor="#FFFFFF"/>
+                </box>
+                <textElement verticalAlignment="Bottom" markup="styled"/>
+                <text><![CDATA[Name]]></text>
+            </staticText>
+            <textField>
+                <reportElement key="name" x="90" y="19" width="140" height="21" uuid="d994987b-ac17-4679-bc6c-dfdd4d8b7630">
+                    <property name="com.jaspersoft.studio.element.name" value="name"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{v_name}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="3" y="49" width="67" height="21" uuid="82924dea-c63a-4de3-9e88-873f6b32d7e8"/>
+                <textElement verticalAlignment="Bottom"/>
+                <text><![CDATA[Department]]></text>
+            </staticText>
+            <textField>
+                <reportElement key="department" x="90" y="51" width="140" height="19" uuid="e9af1cd5-e3be-4751-82d7-3ea24c52ff34">
+                    <property name="com.jaspersoft.studio.element.name" value="department"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{v_department}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="2" y="77" width="78" height="23" uuid="3845c527-ff57-44d1-b5fc-283e4674f67b"/>
+                <textElement verticalAlignment="Bottom"/>
+                <text><![CDATA[Date of last leave]]></text>
+            </staticText>
+            <textField>
+                <reportElement key="last_leave_date" x="90" y="77" width="140" height="23" uuid="cf605088-11c8-42a4-9467-524330de3d00">
+                    <property name="com.jaspersoft.studio.element.name" value="last_leave_date"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.0"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{v_last_leave}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="136" splitType="Stretch">
+
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="125" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="10" width="210" height="20" uuid="131b9ac6-5d9e-4ab7-bb90-ab0983fdc51f"/>
+                <text><![CDATA[I APPLY FOR LEAVE AS HEREUNDER:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="40" width="119" height="20" uuid="36026b7f-db00-4dd5-987b-ea3318be7aa1"/>
+                <text><![CDATA[TYPES OF LEAVE]]></text>
+            </staticText>
+            <break>
+                <reportElement x="0" y="80" width="560" height="1" uuid="2d27609f-5792-4011-a200-bf22ff2a81bc"/>
+            </break>
+            <staticText>
+                <reportElement x="5" y="94" width="95" height="26" uuid="89cdc423-4286-44e5-bf3b-c556bc87d27b"/>
+                <text><![CDATA[Remainig Leave Days]]></text>
+            </staticText>
+            <textField>
+                <reportElement key="remain_leave_days" x="110" y="94" width="70" height="26" uuid="84042acb-1f5a-4b4f-bb99-83254cb96222">
+                    <property name="com.jaspersoft.studio.element.name" value="remain_leave_days"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{v_remain_leave}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="210" y="94" width="70" height="26" uuid="c83377b0-3fd3-4b30-8b71-85dbe925d042"/>
+                <text><![CDATA[Leave Days Requested]]></text>
+            </staticText>
+            <textField>
+                <reportElement key="leave_day_requested" x="290" y="94" width="71" height="26" uuid="2bb324fc-5455-42c3-bc1f-07f278d2b9dc">
+                    <property name="com.jaspersoft.studio.element.name" value="leave_day_requested"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{v_leave_days_requested}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement key="leave_balance" x="480" y="90" width="69" height="30" uuid="5aac30be-4d9e-4993-a4f3-764e40185bb3">
+                    <property name="com.jaspersoft.studio.element.name" value="leave_balance"/>
+                </reportElement>
+                <box>
+                    <pen lineWidth="0.0"/>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{v_leave_day_balance}]]></textFieldExpression>
+            </textField>
+            <break>
+                <reportElement x="0" y="6" width="561" height="1" uuid="df4469e1-4820-4cbc-acfc-dcb14d3c2b21"/>
+            </break>
+            <staticText>
+                <reportElement x="390" y="92" width="80" height="28" uuid="45930476-20cc-4b0e-b3a9-5ab1773c2dcb"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Leave Balance]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="2" y="0" width="78" height="20" uuid="84947ccf-2d4a-471f-94eb-414f718f66f8"/>
+                <textElement verticalAlignment="Bottom"/>
+                <text><![CDATA[Starting Date]]></text>
+            </staticText>
+            <textField>
+                <reportElement key="start_date" x="90" y="0" width="140" height="20" uuid="b0d17d44-9ac6-421c-8e4a-9e25e232c015">
+                    <property name="com.jaspersoft.studio.element.name" value="start_date"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{v_start_date}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="280" y="0" width="100" height="21" uuid="c36c88b7-b9bd-4e3a-90ce-1101132e8abf"/>
+                <textElement verticalAlignment="Middle"/>
+                <text><![CDATA[Resumption Date]]></text>
+            </staticText>
+            <textField>
+                <reportElement key="resumption_date" x="400" y="0" width="140" height="21" uuid="1b13bccb-5781-4b8c-99d1-a96229d393c6">
+                    <property name="com.jaspersoft.studio.element.name" value="resumption_date"/>
+                </reportElement>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{v_resumption_date}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="2" y="30" width="78" height="20" uuid="555621d3-02f1-44f7-85aa-4543e42af334"/>
+                <textElement verticalAlignment="Bottom"/>
+                <text><![CDATA[Contact No]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="80" y="30" width="200" height="20" uuid="162b36cc-ed9b-4df5-9aca-213924cd17da"/>
+                <box>
+                    <topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+                    <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+                </box>
+                <textFieldExpression><![CDATA[$P{v_contact_no}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="45" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="44" splitType="Stretch"/>
+    </summary>
+</jasperReport>
